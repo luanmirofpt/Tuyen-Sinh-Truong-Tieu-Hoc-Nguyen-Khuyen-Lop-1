@@ -926,35 +926,7 @@ span.section-title-main {
 
 	
 </div>
-    <script type="text/javascript">
-        var recaptchaIds = [];
 
-        var cf7srLoadRecaptcha = function() {
-            var widgets = document.querySelectorAll('.cf7sr-g-recaptcha');
-            for (var i = 0; i < widgets.length; ++i) {
-                var widget = widgets[i];
-                recaptchaIds.push(
-                    grecaptcha.render(widget.id, {
-                        'sitekey' : "6Lcfx5kpAAAAAOgDWNnmxaPixQcq5WaDVKwRNS2H"                    })
-                );
-            }
-        };
-
-        function cf7srResetRecaptcha() {
-            for (var i = 0; i < recaptchaIds.length; i++) {
-                grecaptcha.reset(recaptchaIds[i]);
-            }
-        }
-
-        document.querySelectorAll('.wpcf7').forEach(function(element) {
-            element.addEventListener('wpcf7invalid', cf7srResetRecaptcha);
-            element.addEventListener('wpcf7mailsent', cf7srResetRecaptcha);
-            element.addEventListener('invalid.wpcf7', cf7srResetRecaptcha);
-            element.addEventListener('mailsent.wpcf7', cf7srResetRecaptcha);
-        });
-    </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=cf7srLoadRecaptcha&#038;render=explicit&#038;hl=vi" async defer></script>
-    
   <script>
   onload =function(){ 
     var ele = document.querySelectorAll('.wpcf7-numbers-only')[0];
